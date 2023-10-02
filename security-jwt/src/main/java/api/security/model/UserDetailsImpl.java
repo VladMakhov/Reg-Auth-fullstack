@@ -16,14 +16,12 @@ public class UserDetailsImpl implements UserDetails {
     private String username;
     @JsonIgnore
     private String password;
-    private int balance;
 
     public static UserDetailsImpl build(User user) {
         return new UserDetailsImpl(
                 user.getId(),
                 user.getUsername(),
-                user.getPassword(),
-                user.getBalance()
+                user.getPassword()
         );
     }
     @JsonIgnore
