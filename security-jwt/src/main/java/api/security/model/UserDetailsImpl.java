@@ -14,7 +14,6 @@ public class UserDetailsImpl implements UserDetails {
 
     private int id;
     private String username;
-    @JsonIgnore
     private String password;
 
     public static UserDetailsImpl build(User user) {
@@ -24,12 +23,12 @@ public class UserDetailsImpl implements UserDetails {
                 user.getPassword()
         );
     }
-    @JsonIgnore
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
     }
-    @JsonIgnore
+
     @Override
     public String getPassword() {
         return password;
@@ -39,22 +38,22 @@ public class UserDetailsImpl implements UserDetails {
     public String getUsername() {
         return username;
     }
-    @JsonIgnore
+
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
-    @JsonIgnore
+
     @Override
     public boolean isAccountNonLocked() {
         return true;
     }
-    @JsonIgnore
+
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
-    @JsonIgnore
+
     @Override
     public boolean isEnabled() {
         return true;
