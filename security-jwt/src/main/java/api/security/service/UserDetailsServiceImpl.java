@@ -1,8 +1,8 @@
 package api.security.service;
 
-import api.security.model.User;
 import api.security.model.UserDetailsImpl;
 import api.security.repo.UserRepository;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.NoSuchElementException;
 
 @Service
+@Log4j2
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
@@ -21,8 +22,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findUserByUsername(username)
+        var user = userRepository.findUserByUsername(username)
                 .orElseThrow(() -> new NoSuchElementException("User with username: " + username + " not found"));
         return UserDetailsImpl.build(user);
+
     }
 }
