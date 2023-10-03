@@ -8,11 +8,21 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_PASSWORD: root
       MYSQL_DATABASE: security
+
   app:
-    build: ./
+    build:
+      context: /security-jwt
+      dockerfile: /Dockerfile
     container_name: "backend"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/security?createDatabaseIfNotExist=true
     ports:
       - "8080:8080"
 
+  frontend:
+    build:
+      context: /security-frontend
+      dockerfile: /Dockerfile
+    container_name: "frontend"
+    ports:
+      - "3000:3000"
