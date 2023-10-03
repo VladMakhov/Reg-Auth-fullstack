@@ -1,5 +1,5 @@
 # full-stack-security
-Full stack micro-service jwt-auth project.
+Full stack microservice jwt-auth project.
 
 How to configure project:
 1) git clone https://github.com/VladMakhov/full-stack-security

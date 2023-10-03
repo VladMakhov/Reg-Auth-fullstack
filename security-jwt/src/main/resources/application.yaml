@@ -12,3 +12,6 @@ spring:
 
 security:
   lifetime: 60000
+
+server:
+  port: 8080
