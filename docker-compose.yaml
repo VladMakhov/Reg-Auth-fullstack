@@ -12,7 +12,7 @@ services:
   app:
     build:
       context: /security-jwt
-      dockerfile: /Dockerfile
+      dockerfile: ../Dockerfile-backend
     container_name: "backend"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/security?createDatabaseIfNotExist=true
@@ -22,7 +22,7 @@ services:
   frontend:
     build:
       context: /security-frontend
-      dockerfile: /Dockerfile
+      dockerfile: ../Dockerfile-frontend
     container_name: "frontend"
     ports:
       - "3000:3000"
