@@ -1,9 +1,10 @@
-package api.security.model.dto;
+package api.security.dto;
 
 import lombok.Data;
 
 @Data
-public class RegistrationRequest {
+public class LoginRequest {
     private String username;
     private String password;
 }
+

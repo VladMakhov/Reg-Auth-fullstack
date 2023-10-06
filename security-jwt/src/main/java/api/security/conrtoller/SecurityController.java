@@ -1,8 +1,8 @@
 package api.security.conrtoller;
 
-import api.security.model.dto.LoginRequest;
-import api.security.model.dto.LoginResponse;
-import api.security.model.dto.RegistrationRequest;
+import api.security.dto.LoginRequest;
+import api.security.dto.LoginResponse;
+import api.security.dto.RegistrationRequest;
 import api.security.service.SecurityService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;

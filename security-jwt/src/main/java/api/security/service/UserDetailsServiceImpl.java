@@ -1,6 +1,5 @@
 package api.security.service;
 
-import api.security.model.UserDetailsImpl;
 import api.security.repo.UserRepository;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.security.core.userdetails.UserDetails;

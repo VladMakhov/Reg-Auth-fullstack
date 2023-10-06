@@ -1,9 +1,9 @@
 package api.security.service;
 
 import api.security.model.User;
-import api.security.model.dto.LoginRequest;
-import api.security.model.dto.LoginResponse;
-import api.security.model.dto.RegistrationRequest;
+import api.security.dto.LoginRequest;
+import api.security.dto.LoginResponse;
+import api.security.dto.RegistrationRequest;
 import api.security.repo.UserRepository;
 import api.security.util.JwtUtil;
 import org.springframework.http.HttpStatus;

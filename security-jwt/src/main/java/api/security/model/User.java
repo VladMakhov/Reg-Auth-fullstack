@@ -1,10 +1,7 @@
 package api.security.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
@@ -23,5 +20,8 @@ public class User {
 
     @Column
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Role role = Role.USER;
 
 }

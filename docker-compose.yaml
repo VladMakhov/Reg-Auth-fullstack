@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  mysql:
+  database:
     image: "mysql:8.1"
     container_name: "mysql"
     environment:
@@ -9,7 +9,7 @@ services:
       MYSQL_PASSWORD: root
       MYSQL_DATABASE: security
 
-  app:
+  backend:
     build:
       context: /security-jwt
       dockerfile: ../Dockerfile-backend
